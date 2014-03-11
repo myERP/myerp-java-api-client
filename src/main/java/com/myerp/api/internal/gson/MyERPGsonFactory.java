@@ -57,7 +57,7 @@ public class MyERPGsonFactory {
    * to set proper time zone.
    */
   private static class DateTypeAdapter implements JsonSerializer<Date>, JsonDeserializer<Date> {
-    private final DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private final DateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 
     DateTypeAdapter() {
       format.setTimeZone(TimeZone.getTimeZone("UTC"));
