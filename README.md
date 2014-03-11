@@ -1,5 +1,7 @@
 # myERP API
 
+[![Build Status](https://travis-ci.org/myERP/myerp-java-api-client.png?branch=master)](https://travis-ci.org/myERP/myerp-java-api-client)
+
 A Java client library for [myERP's API](http://developers.myerp.com).
 
 ## Installation Using [Maven](http://maven.org/)
