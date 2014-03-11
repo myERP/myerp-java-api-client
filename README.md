@@ -125,8 +125,6 @@ try {
 } catch (NotFoundException e) {
   System.err.println(e);
 }
-
-
 ```
 
 ## Contributing
