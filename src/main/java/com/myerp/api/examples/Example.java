@@ -1,31 +1,3 @@
-# myERP API
-
-A Java client library for [myERP's API](http://developers.myerp.com).
-
-## Installation Using [Maven](http://maven.org/)
-Use the following dependency in your project:
-
-     <dependency>
-	<groupId>com.myerp.api</groupId>
-	<artifactId>myerp-java-api-client</artifactId>
-	<version>0.1.0</version>
-	<scope>compile</scope>
-     </dependency>
-
-If you want to compile it yourself, here's how:
-
-    $ git clone git@github.com:myerp/myerp-java-api-client
-    $ cd myerp-java-api-client
-    $ mvn install    # Requires maven, download from http://maven.apache.org/download.html
-
-
-## Getting Started
-
-- 1 - Retrieve your API_KEY and your API_EMAIL from the API settings. More information [here](http://developers.myerp.com/docs/1.0/overview/security_authentication.html).
-
-- 2 - Here are some examples about the customer API
-
-```java
 package com.myerp.api.examples;
 
 import com.myerp.api.MyERPClient;
@@ -55,7 +27,7 @@ public class Example {
     }
 
     // retrieve a customer
-    Customer customer = client.customersAPI().find(1337);
+    Customer customer = client.customersAPI().find(261366);
     System.out.println(customer.full_name + " [id=" + customer.id + "]");
 
     // create a customer
@@ -114,63 +86,3 @@ public class Example {
 
   }
 }
-```
-
-## Exceptions
-If the myERP API returns a 400 or a 500 level HTTP response, the library will throw a MyERPException. All the exception should be handled appropriately.
-
-```java
-
-// retrieve a customer
-try {
-  Customer customer = client.customersAPI().find(1337);
-  System.out.println(customer.full_name + " [id=" + customer.id + "]");
-} catch (NotFoundException e) {
-  System.err.println(e);
-}
-
-
-```
-
-## Contributing
-
-Thanks for considering contributing to this project.
-
-### Finding something to do
-
-Ask, or pick an issue and comment on it announcing your desire to work on it. Ideally wait until we assign it to you to minimize work duplication.
-
-### Reporting an issue
-
-- Search existing issues before raising a new one.
-
-- Include as much detail as possible.
-
-### Pull requests
-
-- Make it clear in the issue tracker what you are working on, so that someone else doesn't duplicate the work.
-
-- Use a feature branch, not master.
-
-- Rebase your feature branch onto origin/master before raising the PR.
-
-- Keep up to date with changes in master so your PR is easy to merge.
-
-- Be descriptive in your PR message: what is it for, why is it needed, etc.
-
-- Make sure the tests pass
-
-- Squash related commits as much as possible.
-
-### Coding style
-
-- Try to match the existing indent style.
-
-- Don't abuse the pre-processor.
-
-- Don't mix platform-specific stuff into the main code.
-
-
-## License
-
-The myERP API wrapper is released under the [MIT License](http://www.opensource.org/licenses/MIT).
