@@ -7,7 +7,7 @@ import static org.junit.Assert.fail;
 
 import com.myerp.api.APIResponse;
 import com.myerp.api.MyERPObject;
-import com.myerp.api.exceptions.AuthenticationFailedException;
+import com.myerp.api.exceptions.UnauthorizedException;
 import com.myerp.api.exceptions.MyERPException;
 import com.myerp.api.exceptions.NotFoundException;
 import com.myerp.api.internal.gson.MyERPGsonFactory;
@@ -95,7 +95,7 @@ public class APIResponseTest {
     try {
       os = r.getData(gson, aClass);
       fail();
-    } catch (AuthenticationFailedException e) {
+    } catch (UnauthorizedException e) {
       assertEquals("other", e.code);
       assertEquals("The request requires user authentication", e.message);
       assertEquals("", e.reason);
