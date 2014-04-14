@@ -26,7 +26,7 @@ import java.util.TimeZone;
  * https://github.com/Ecwid/ecwid-mailchimp/blob/master/src/main/java/com/ecwid/mailchimp/internal/gson/
  * MailChimpGsonFactory.java
  * -
- *
+ * 
  * @author Vasily Karyaev <v.karyaev@gmail.com>
  */
 public class MyERPGsonFactory {
@@ -57,7 +57,7 @@ public class MyERPGsonFactory {
    * to set proper time zone.
    */
   private static class DateTypeAdapter implements JsonSerializer<Date>, JsonDeserializer<Date> {
-    private final DateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+    private final DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
     DateTypeAdapter() {
       format.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -66,18 +66,18 @@ public class MyERPGsonFactory {
     @Override
     public JsonElement serialize(Date t, Type type, JsonSerializationContext jsc) {
       synchronized (format) {
-	return new JsonPrimitive(format.format(t));
+        return new JsonPrimitive(format.format(t));
       }
     }
 
     @Override
     public Date deserialize(JsonElement je, Type type, JsonDeserializationContext jdc) throws JsonParseException {
       synchronized (format) {
-	try {
-	  return !je.getAsString().isEmpty() ? format.parse(je.getAsString()) : null;
-	} catch (ParseException e) {
-	  throw new IllegalArgumentException("Cannot deserialize date: " + je);
-	}
+        try {
+          return !je.getAsString().isEmpty() ? format.parse(je.getAsString()) : null;
+        } catch (ParseException e) {
+          throw new IllegalArgumentException("Cannot deserialize date: " + je);
+        }
       }
     }
   }

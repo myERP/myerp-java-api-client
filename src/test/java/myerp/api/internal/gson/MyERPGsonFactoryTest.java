@@ -109,8 +109,8 @@ public class MyERPGsonFactoryTest {
 
     JsonObject json = gson.toJsonTree(o).getAsJsonObject();
     assertEquals(json.entrySet().size(), 8);
-    assertEquals(json.get("date").getAsString(), "01-01-1970");
-    assertEquals(json.get("timestamp").getAsString(), "01-01-1970");
+    assertEquals(json.get("date").getAsString(), "1970-01-01");
+    assertEquals(json.get("timestamp").getAsString(), "1970-01-01");
     assertEquals(json.get("integer").getAsInt(), 666);
     assertEquals(json.get("object").getAsJsonObject().get("key").getAsString(), "value");
     assertEquals(json.get("child").getAsJsonObject().get("integer").getAsInt(), 555);
