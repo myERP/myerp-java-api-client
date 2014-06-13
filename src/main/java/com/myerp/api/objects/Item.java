@@ -8,16 +8,13 @@ public class Item extends MyERPObject {
   public Integer id;
 
   @Field
-  public String external_id;
-
-  @Field
   public Integer type;
 
   @Field
   public String name;
 
   @Field
-  public Integer unit;
+  public Integer unit_id;
 
   @Field
   public Double sales_price;
@@ -29,11 +26,12 @@ public class Item extends MyERPObject {
   public String description;
 
   @Field
-  public Integer family;
+  public Integer family_id;
 
   @Field
   public String private_note;
 
+  //products only
   @Field
   public Double purchase_price;
 
@@ -50,6 +48,6 @@ public class Item extends MyERPObject {
   public Double height;
 
   @Field
-  public Integer dimension_unit;
+  public Integer dimension_unit_id;
 
 }
