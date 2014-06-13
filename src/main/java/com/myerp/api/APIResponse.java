@@ -36,7 +36,6 @@ public class APIResponse<T> {
 
     List<T> res = new ArrayList<T>();
     JsonElement result = new JsonParser().parse(this.getBody());
-    System.err.println(result);
     if (result.isJsonObject()) {
       JsonElement error = result.getAsJsonObject().get("error");
       if (error != null) {
