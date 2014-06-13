@@ -27,13 +27,13 @@ public class ExampleTransactions {
     e.label = "Invoice Payment";
     e.amount = 17578.65;
     e.way = "debit";
-    e.account = 21;
+    e.account_id = 21;
 
     AccountingEntry e1 = new AccountingEntry();
     e1.label = "Invoice Payment";
     e1.amount = 17578.65;
     e1.way = "credit";
-    e1.account = 85;
+    e1.account_id = 85;
 
     t.entries = Arrays.asList(e, e1);
     t = client.transactionsAPI().save(t);
