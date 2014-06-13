@@ -31,6 +31,9 @@ public class Customer extends MyERPObject {
   public String email;
 
   @Field
+  public String website;
+
+  @Field
   public List<Contact> contacts;
 
   @Field
