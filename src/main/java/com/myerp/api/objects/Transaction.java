@@ -17,7 +17,7 @@ public class Transaction extends MyERPObject {
   public Date date;
 
   @Field
-  public Integer journal;
+  public Integer journal_id;
 
   @Field
   public String piece_number;

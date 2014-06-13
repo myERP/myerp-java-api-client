@@ -14,7 +14,7 @@ public class AccountingEntry extends MyERPObject {
   public String way;
 
   @Field
-  public Integer account;
+  public Integer account_id;
 
   @Field
   public String account_label;
