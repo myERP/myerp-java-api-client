@@ -45,11 +45,11 @@ public abstract class API<T extends MyERPObject> {
     do {
       URIBuilder builder = new URIBuilder();
       builder.setPath(this.getPath()).addParameter("offset", Integer.toString(page * limit))
-	  .addParameter("limit", Integer.toString(limit));
+          .addParameter("limit", Integer.toString(limit));
       try {
-	resp = execute("get", builder.build().toString());
+        resp = execute("get", builder.build().toString());
       } catch (URISyntaxException e) {
-	e.printStackTrace();
+        e.printStackTrace();
       }
       list.addAll(resp.getData(gson, aClass));
       page++;
@@ -91,10 +91,10 @@ public abstract class API<T extends MyERPObject> {
     Method declaredMethod = null;
     try {
       declaredMethod =
-	  connection.getClass().getDeclaredMethod(method, new Class[] { String.class, String.class, String.class });
+          connection.getClass().getDeclaredMethod(method, new Class[] { String.class, String.class, String.class });
       response =
-	  (APIResponse<T>) declaredMethod.invoke(connection, this.endpoint + url, payload, this.apiEmail + ":"
-	      + this.apiKey);
+          (APIResponse<T>) declaredMethod.invoke(connection, this.endpoint + url, payload, this.apiEmail + ":"
+              + this.apiKey);
     } catch (SecurityException e) {
       e.printStackTrace();
     } catch (NoSuchMethodException e) {
