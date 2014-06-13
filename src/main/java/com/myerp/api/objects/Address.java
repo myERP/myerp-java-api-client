@@ -14,7 +14,7 @@ public class Address extends MyERPObject {
   public String label3;
 
   @Field
-  public String zipcode;
+  public String zip_code;
 
   @Field
   public String city;

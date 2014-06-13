@@ -64,7 +64,7 @@ public class Example {
     john.last_name = "Doe";
     john.address = new Address();
     john.address.label1 = "1 powell street";
-    john.address.zipcode = "94102";
+    john.address.zip_code = "94102";
     john.address.city = "San Francisco";
     john.address.country = "United States";
     john.address.localisation = "California";
