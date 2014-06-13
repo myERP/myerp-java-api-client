@@ -16,7 +16,7 @@ public class MyERPClient {
 
   private String apiKey;
 
-  private String endpoint = "https://app.myerp.com/api/v1";
+  private String endpoint = "https://api.myerp.com/v1";
 
   private CustomersAPI customersAPI = null;
 
