@@ -33,8 +33,4 @@ public class Contact extends MyERPObject {
 
   @Field
   public String notes;
-
-  @Field
-  //deprecated
-  public Integer customer_id;
 }
