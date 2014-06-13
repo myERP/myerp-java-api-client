@@ -9,6 +9,7 @@ import com.myerp.api.apis.PaymentTermsAPI;
 import com.myerp.api.apis.ProjectsAPI;
 import com.myerp.api.apis.SalesOrdersAPI;
 import com.myerp.api.apis.TransactionsAPI;
+import com.myerp.api.apis.VendorsAPI;
 
 public class MyERPClient {
 
@@ -35,6 +36,8 @@ public class MyERPClient {
   private PaymentTermsAPI paymentTermsAPI = null;
 
   private CurrenciesAPI currenciesAPI = null;
+
+  private VendorsAPI vendorsAPI = null;
 
   public MyERPClient(String apiEmail, String apiKey) {
     this(apiEmail, apiKey, null);
@@ -118,5 +121,13 @@ public class MyERPClient {
     }
     this.currenciesAPI = new CurrenciesAPI(this.apiEmail, this.apiKey, this.endpoint);
     return this.currenciesAPI;
+  }
+
+  public VendorsAPI vendorsAPI() {
+    if (this.vendorsAPI != null) {
+      return this.vendorsAPI;
+    }
+    this.vendorsAPI = new VendorsAPI(this.apiEmail, this.apiKey, this.endpoint);
+    return this.vendorsAPI;
   }
 }
