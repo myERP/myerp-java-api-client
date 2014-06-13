@@ -96,19 +96,6 @@ public class Example {
     lisa.type = 2;
     lisa.first_name = "Lisa";
     lisa.last_name = "Doe";
-
-    // bulk creation/modification
-    List<Customer> bulkCustomers = client.customersAPI().save(Arrays.asList(new Customer[] { ken, lisa }));
-    for (Customer cus : bulkCustomers) {
-      System.out.println(cus.full_name + " created [id=" + cus.id + "]");
-    }
-
-    // bulk deletion
-    customers = client.customersAPI().delete(bulkCustomers);
-    for (Customer cus : customers) {
-      System.out.println(cus.full_name + " deleted [id=" + cus.id + "]");
-    }
-
   }
 }
 ```
