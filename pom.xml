@@ -4,7 +4,7 @@
   <artifactId>myerp-java-api-client</artifactId>
   <packaging>jar</packaging>
   <name>myerp-java-api-client</name>
-  <version>0.1.0</version>
+  <version>0.1.1-SNAPSHOT</version>
   <description>Java helper library for myERP services</description>
   <url>http://developers.myerp.com</url>
   <licenses>
