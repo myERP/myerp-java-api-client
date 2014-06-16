@@ -7,7 +7,11 @@ A Java client library for [myERP's API](http://developers.myerp.com).
 ## Installation Using [Maven](http://maven.org/)
 Use the following dependency in your project:
 
-    available soon
+    <dependency>
+        <groupId>com.myerp.api</groupId>
+        <artifactId>myerp-java-api-client</artifactId>
+        <version>0.1.0</version>
+    </dependency>
 
 If you want to compile it yourself, here's how:
 
